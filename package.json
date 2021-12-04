@@ -31,8 +31,24 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamaaldev/birthday-check.git"
+  },
+  "keywords": [
+    "birthday-check",
+    "birthday",
+    "age",
+    "day left",
+    "day gone"
+  ],
   "name": "birthday-check",
   "author": "jamaaldev",
+  "bugs": {
+    "url": "https://github.com/jamaaldev/birthday-check/issues"
+  },
+  "homepage": "https://github.com/jamaaldev/birthday-check#readme",
+
   "module": "dist/birthday.esm.js",
   "size-limit": [
     {

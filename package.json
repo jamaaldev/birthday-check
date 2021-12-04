@@ -1,5 +1,5 @@
 {
-  "version": "2.0.4",
+  "version": "2.0.5",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -48,7 +48,6 @@
     "url": "https://github.com/jamaaldev/birthday-check/issues"
   },
   "homepage": "https://github.com/jamaaldev/birthday-check#readme",
-
   "module": "dist/birthday.esm.js",
   "size-limit": [
     {

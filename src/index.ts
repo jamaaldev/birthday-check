@@ -115,10 +115,10 @@ class DaysGone {
 //######
 class JointDate {
   YearJoint = (jointed: any, dayFormat: any) => {
-    const dateFormat = new Date(jointed);
-    const jointYear = new Date(dateFormat).getFullYear();
-    const jointMonth = new Date(dateFormat).getMonth();
-    const jointDay = new Date(dateFormat).getDate();
+    const jointYear = new Date(jointed).getFullYear();
+    const jointMonth = new Date(jointed).getMonth();
+    const jointDayNumber = new Date(jointed).getDate();
+    const jointDayName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][new Date(jointed).getDay()]
 
     const months = [
       'January',
@@ -134,35 +134,28 @@ class JointDate {
       'November',
       'December',
     ];
-    const dayName = [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-    ];
-    const jointMonthName = months[jointMonth];
-    const jointDayName = dayName[jointDay];
-    switch (dayFormat) {
-      case 'dayNumber':
-        return `${jointDay} ${jointMonthName} ${jointYear}`;
-      case 'dayName':
-        return `${jointDayName} ${jointMonthName} ${jointYear}`;
-      case undefined:
-        return `${jointMonthName} ${jointYear}`;
-      case '':
-        return `${jointMonthName} ${jointYear}`;
-      case null:
-        return `${jointMonthName} ${jointYear}`;
-      default: {
-        if (dayFormat.length) {
-          return `${jointMonthName} ${jointYear}`;
-        }
-      }
-    }
 
+
+    const jointMonthName = months[jointMonth];
+ 
+    if(dayFormat === 'dayName'){
+      return `${jointDayName} ${jointMonthName} ${jointYear}`;
+    }
+    if(dayFormat === 'dayNumber'){
+      return `${jointDayNumber} ${jointMonthName} ${jointYear}`;
+    }
+    if(dayFormat === ''){
+      return `${jointMonthName} ${jointYear}`;
+    }
+    if(dayFormat === 'undefined'){
+      return `${jointMonthName} ${jointYear}`;
+    }
+    if(dayFormat === undefined){
+      return `${jointMonthName} ${jointYear}`;
+    }
+    if(dayFormat === null){
+      return `${jointMonthName} ${jointYear}`;
+    }
     return;
   };
 }

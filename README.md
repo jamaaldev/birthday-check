@@ -15,12 +15,19 @@ Feature:DaysGone :white_check_mark:
 * DaysGoneBirthDay Function Return How Many Days Gone By From BirthDay Date in it's String:<br>
   `
   birthGone.DaysGoneBirthDay(user.DOB,'15')
+  `<br>
+
+Feature:JointDate :white_check_mark:
+* JointDay Function Return When The user Joint:<br>
+* 
+  `
+  JointYear.JointDay('user.joint','options')
   `
 
 ## Notes: `This is Beta Release`:mega:
 
  ## Use:<br> 
-This module package is For FrontEnd and BackEnd You Must Use Import To Work With it, You Can't use Require With import  Caution it Will Break your Code,  This information is Those newbie Developers. 
+This module package is For FrontEnd and BackEnd You can Use Import To Work With it, You Can use Require asWell:  Caution it Will Break your Code if You use both import and Require at the same Project,  This information is Those newbie Developers. 
 
 ## Install the Package by::blossom:
 ```
@@ -37,13 +44,19 @@ type="module"
 ### How To import in to your project FrontEnd Javascript Vanilla: <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/><br>
 
 ```
-import {DaysToCome} from './node_modules/birthday-check/dist/birthday-check.esm.js'
+import {DaysGone,DaysToCome,JointDate} from './node_modules/birthday-check/dist/birthday-check.esm.js'
 ```
 
 ### How To import in to your project ReactJs:<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>: and NodeJs: <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/><br>
 
+please make sure if you use import in ReactJS or NodeJS  you need to add in your package.json:<br> `"type": "module"`
 ```
-import {DaysToCome} from 'birthday-check'
+import {DaysGone,DaysToCome,JointDate} from 'birthday-check'
+```
+if you use require in NodeJs This is only for NodeJs you don't need to add in your package.json: `"type": "module"`<br>
+
+```
+const {DaysGone,DaysToCome,JointDate} = require('birthday-check')
 ```
 
 #### CustomText if you need Different text you can add like this Example or leave Empty String Except textGreeting if you want to show Today is your BirthDay or make it Empty as you Wish ,
@@ -80,11 +93,28 @@ const birthGone = new DaysGone(customTextDaysGone)
 ```
   const birthGone = new DaysGone('')
 ```
+This feature you dont need customText
+```
+const JointYear = new JointDate()
+```
 <br>
 
 ### What is For This Package Do For You At The Moment:<br>
- you need to calculate the user's date of birth from today. It will return how many days left from now on or 1 day left or today is your birthday also Age, and how many Days Gone from birthday you can customize the Text as I already mentioned it above.<br>
+ you need to calculate the user's date of birth from today. It will return how many days left from now on or 1 day left or today is your birthday, you can also get when the user joint day, month, year, or only month and year, you have option to choose, also How old the user is, and how many Days Gone from birthday, you can customize the Text as I already mentioned it above.<br>
 
+
+### Example The user joint a day on that month and that year
+```
+JointYear.JointDay('user.joint','options'))
+
+JointYear.JointDay('2021-11-05','dayNumber')) //return =>  5 November 2021
+JointYear.JointDay('2021-11-05','dayName')) //return =>  Friday November 2021
+
+JointYear.JointDay('2021-11-05','') // return =>  November 2021
+JointYear.JointDay('2021-11-05','any string you put') // return =>  November 2021
+JointYear.JointDay('2021-11-05') // return => November 2021
+
+```
 
 #### Note: This is For Browser Javascript Vanilla Tag Element and ClassName,
 
@@ -150,8 +180,13 @@ Feature:DaysGone :white_check_mark:
 * DaysGoneBirthDay Function Return How Many Days Gone By From BirthDay Date:<br>
   `
   birthGone.DaysGoneBirthDay(user.DOB,'15')
-  ` 
+  ` <br>
+
+Feature:JointDate :white_check_mark:
+* JointDay Function Return When The user Joint:<br>
+  `
+  JointYear.JointDay('user.joint','options')
+  `
 
 You can Use With Browser <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> and ReactJs<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>; and NodeJs: <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/><br>
-I am working on Another Feature: JointDay
 

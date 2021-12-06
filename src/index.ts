@@ -113,4 +113,50 @@ class DaysGone {
   }
 }
 
-export { DaysToCome, DaysGone };
+class JointDate {
+  JointDay(Joint:string,dayFormat:any){
+      const jointYear = new Date(Joint).getFullYear();
+      const jointMonth = new Date(Joint).getMonth();
+      const jointDay = new Date(Joint).getDate();
+
+      const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        const DayName =  ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        const jointMonthName = months[jointMonth];
+        const jointDayName = DayName[jointDay]
+            if(dayFormat === 'dayNumber'){
+              return `${jointDay} ${jointMonthName} ${jointYear}`
+            }
+            if(dayFormat === 'dayName'){
+              return `${jointDayName} ${jointMonthName} ${jointYear}`
+            }
+            if(dayFormat === undefined){
+              return `${jointMonthName} ${jointYear}`
+            }
+            if(dayFormat === null){
+              return `${jointMonthName} ${jointYear}`
+            }
+            if(dayFormat === ''){
+              return `${jointMonthName} ${jointYear}`
+            } else if(dayFormat.length) {
+              return `${jointMonthName} ${jointYear}`
+
+            }
+         return
+        }
+        
+  }
+
+export { DaysToCome, DaysGone, JointDate };

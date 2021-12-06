@@ -105,14 +105,14 @@ const jointYears = new JointDate()
 
 ### Example The user joint a day on that month and that year
 ```
-JointYears.YearJoint('user.joint','options'))
+jointYears.YearJoint('user.joint','options'))
 
-JointYears.YearJoint('2021-11-05','dayNumber')) //return =>  5 November 2021
-JointYears.YearJoint('2021-11-05','dayName')) //return =>  Friday November 2021
+jointYears.YearJoint('2021-11-05','dayNumber')) //return =>  5 November 2021
+jointYears.YearJoint('2021-11-05','dayName')) //return =>  Friday November 2021
 
-JointYears.YearJoint('2021-11-05','') // return =>  November 2021
-JointYears.YearJoint('2021-11-05','any string you put') // return =>  November 2021
-JointYears.YearJoint('2021-11-05') // return => November 2021
+jointYears.YearJoint('2021-11-05','') // return =>  November 2021
+jointYears.YearJoint('2021-11-05','any string you put') // return =>  November 2021
+jointYears.YearJoint('2021-11-05') // return => November 2021
 
 ```
 #### Note: This is For Browser Javascript Vanilla Tag Element and ClassName,

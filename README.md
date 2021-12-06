@@ -18,10 +18,10 @@ Feature:DaysGone :white_check_mark:
   `<br>
 
 Feature:JointDate :white_check_mark:
-* JointDay Function Return When The user Joint:<br>
+* YearJoint Function Return When The user Joint:<br>
 * 
   `
-  JointYear.JointDay('user.joint','options')
+  JointYears.YearJoint('user.joint','options')
   `
 
 ## Notes: `This is Beta Release`:mega:
@@ -95,7 +95,7 @@ const birthGone = new DaysGone(customTextDaysGone)
 ```
 This feature you dont need customText
 ```
-const JointYear = new JointDate()
+const jointYears = new JointDate()
 ```
 <br>
 
@@ -105,17 +105,16 @@ const JointYear = new JointDate()
 
 ### Example The user joint a day on that month and that year
 ```
-JointYear.JointDay('user.joint','options'))
+JointYears.YearJoint('user.joint','options'))
 
-JointYear.JointDay('2021-11-05','dayNumber')) //return =>  5 November 2021
-JointYear.JointDay('2021-11-05','dayName')) //return =>  Friday November 2021
+JointYears.YearJoint('2021-11-05','dayNumber')) //return =>  5 November 2021
+JointYears.YearJoint('2021-11-05','dayName')) //return =>  Friday November 2021
 
-JointYear.JointDay('2021-11-05','') // return =>  November 2021
-JointYear.JointDay('2021-11-05','any string you put') // return =>  November 2021
-JointYear.JointDay('2021-11-05') // return => November 2021
+JointYears.YearJoint('2021-11-05','') // return =>  November 2021
+JointYears.YearJoint('2021-11-05','any string you put') // return =>  November 2021
+JointYears.YearJoint('2021-11-05') // return => November 2021
 
 ```
-
 #### Note: This is For Browser Javascript Vanilla Tag Element and ClassName,
 
 ```
@@ -182,10 +181,11 @@ Feature:DaysGone :white_check_mark:
   birthGone.DaysGoneBirthDay(user.DOB,'15')
   ` <br>
 
-Feature:JointDate :white_check_mark:
-* JointDay Function Return When The user Joint:<br>
+  Feature:JointDate :white_check_mark:
+* YearJoint Function Return When The user Joint:<br>
+  
   `
-  JointYear.JointDay('user.joint','options')
+  JointYears.YearJoint('user.joint','options')
   `
 
 You can Use With Browser <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> and ReactJs<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>; and NodeJs: <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/><br>

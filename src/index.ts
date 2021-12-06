@@ -112,12 +112,13 @@ class DaysGone {
     return;
   }
 }
-
+//######
 class JointDate {
-  JointDay(Joint: string, dayFormat: any) {
-    const jointYear = new Date(Joint).getFullYear();
-    const jointMonth = new Date(Joint).getMonth();
-    const jointDay = new Date(Joint).getDate();
+  YearJoint = (jointed: any, dayFormat: any) => {
+    const dateFormat = new Date(jointed);
+    const jointYear = new Date(dateFormat).getFullYear();
+    const jointMonth = new Date(dateFormat).getMonth();
+    const jointDay = new Date(dateFormat).getDate();
 
     const months = [
       'January',
@@ -133,7 +134,7 @@ class JointDate {
       'November',
       'December',
     ];
-    const DayName = [
+    const dayName = [
       'Sunday',
       'Monday',
       'Tuesday',
@@ -143,26 +144,27 @@ class JointDate {
       'Saturday',
     ];
     const jointMonthName = months[jointMonth];
-    const jointDayName = DayName[jointDay];
-    if (dayFormat === 'dayNumber') {
-      return `${jointDay} ${jointMonthName} ${jointYear}`;
+    const jointDayName = dayName[jointDay];
+    switch (dayFormat) {
+      case 'dayNumber':
+        return `${jointDay} ${jointMonthName} ${jointYear}`;
+      case 'dayName':
+        return `${jointDayName} ${jointMonthName} ${jointYear}`;
+      case undefined:
+        return `${jointMonthName} ${jointYear}`;
+      case '':
+        return `${jointMonthName} ${jointYear}`;
+      case null:
+        return `${jointMonthName} ${jointYear}`;
+      default: {
+        if (dayFormat.length) {
+          return `${jointMonthName} ${jointYear}`;
+        }
+      }
     }
-    if (dayFormat === 'dayName') {
-      return `${jointDayName} ${jointMonthName} ${jointYear}`;
-    }
-    if (dayFormat === undefined) {
-      return `${jointMonthName} ${jointYear}`;
-    }
-    if (dayFormat === null) {
-      return `${jointMonthName} ${jointYear}`;
-    }
-    if (dayFormat === '') {
-      return `${jointMonthName} ${jointYear}`;
-    } else if (dayFormat.length) {
-      return `${jointMonthName} ${jointYear}`;
-    }
+
     return;
-  }
+  };
 }
 
 export { DaysToCome, DaysGone, JointDate };

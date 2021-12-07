@@ -1,5 +1,6 @@
 # birthday-check
 made by :somalia: 
+![](https://github.com/jamaaldev/DesktopFiles/blob/bea2d938ee9cf4b6cb46b512454d1e9306254a76/HD%20Banner%20(1).png?raw=true?raw=trues=400)
 
 Feature:DaysToCome :white_check_mark:<br>
 * YearsOld Function Return How old The Person is in a Number:

@@ -3,6 +3,7 @@ class DaysToCome {
   textDaysLeft: string;
   textDayLeft: string;
   textBirthDay: string;
+
   constructor({ textGreeting, textDaysLeft, textDayLeft, textBirthDay }: any) {
     this.textGreeting = textGreeting;
     this.textDaysLeft = textDaysLeft;
@@ -36,7 +37,7 @@ class DaysToCome {
     const diffDays = Math.floor(
       (+new Date(birthMonth + '-' + birthDay) -
         +new Date(`'${toMonth}-${toDay}'`)) /
-        86400000
+      86400000
     );
     const checkDayorDays = (dayOrDays: any) => {
       switch (dayOrDays) {
@@ -63,8 +64,8 @@ class DaysToCome {
         if (diffDays <= parseInt(DaysLeft) && 0 <= diffDays) {
           return `${el ? `<${el} class="${nameClass}">` : ''} ${this
             .textBirthDay || ''} ${checkDayorDays(
-            checkDaysLeft(diffDays) && diffDays <= 1
-          )} ${el ? `</${el}>` : ''}`;
+              checkDaysLeft(diffDays) && diffDays <= 1
+            )} ${el ? `</${el}>` : ''}`;
         }
     }
     return;
@@ -90,22 +91,20 @@ class DaysGone {
     const diffDays = Math.floor(
       (+new Date(birthMonth + '-' + birthDay) -
         +new Date(`'${toMonth}-${toDay}'`)) /
-        86400000
+      86400000
     );
 
     const goneDays = -diffDays;
     switch (goneDays) {
       case 1:
         return ` ${el ? `<${el} class="${nameClass}">` : ''}${this
-          .textBirthDayGone || ''} ${goneDays} ${this.textDayGone || ' '} ${
-          el ? `</${el}>` : ''
-        }`;
+          .textBirthDayGone || ''} ${goneDays} ${this.textDayGone || ' '} ${el ? `</${el}>` : ''
+          }`;
       default:
         if (goneDays > 1 && goneDays <= parseInt(DayGone)) {
           return `${el ? `<${el} class="${nameClass}">` : ''} ${this
-            .textBirthDayGone || ''} ${goneDays} ${this.textDaysGone || ' '} ${
-            el ? `</${el}>` : ''
-          }`;
+            .textBirthDayGone || ''} ${goneDays} ${this.textDaysGone || ' '} ${el ? `</${el}>` : ''
+            }`;
         }
     }
 
@@ -118,7 +117,7 @@ class JointDate {
     const jointYear = new Date(jointed).getFullYear();
     const jointMonth = new Date(jointed).getMonth();
     const jointDayNumber = new Date(jointed).getDate();
-    const jointDayName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][new Date(jointed).getDay()]
+    const jointDayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][new Date(jointed).getDay()]
 
     const months = [
       'January',
@@ -137,23 +136,26 @@ class JointDate {
 
 
     const jointMonthName = months[jointMonth];
- 
-    if(dayFormat === 'dayName'){
+
+    if (dayFormat === 'dayName') {
       return `${jointDayName} ${jointMonthName} ${jointYear}`;
     }
-    if(dayFormat === 'dayNumber'){
+    if (dayFormat === 'dayNumber') {
       return `${jointDayNumber} ${jointMonthName} ${jointYear}`;
     }
-    if(dayFormat === ''){
+    if (dayFormat === '') {
       return `${jointMonthName} ${jointYear}`;
     }
-    if(dayFormat === 'undefined'){
+    if (dayFormat === 'undefined') {
       return `${jointMonthName} ${jointYear}`;
     }
-    if(dayFormat === undefined){
+    if (dayFormat === undefined) {
       return `${jointMonthName} ${jointYear}`;
     }
-    if(dayFormat === null){
+    if (dayFormat.length) {
+      return `${jointMonthName} ${jointYear}`;
+    }
+    if (dayFormat === null) {
       return `${jointMonthName} ${jointYear}`;
     }
     return;

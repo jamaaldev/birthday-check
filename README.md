@@ -10,7 +10,7 @@
 ![npm](https://img.shields.io/npm/v/birthday-check?style=for-the-badge)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/birthday-check?style=for-the-badge)
 # birthday-check
-made by :somalia: 
+ 
 ![](https://github.com/jamaaldev/DesktopFiles/blob/1e9d00e9bb9536a9903ced9d263ab46aa2c4e199/HD%20Banner%20(2).jpeg?raw=true?raw=trues=400)
 
 Feature:DaysToCome :white_check_mark:<br>
@@ -36,7 +36,7 @@ Feature:JointDate :white_check_mark:
   JointYears.YearJoint('user.joint','options')
   `
 
-## Notes: `This is Beta Release`:mega:
+## Notes: `This is Beta Release Final please use 2.1.6 or up Future Release`:mega:
 
  ## Use:<br> 
 This module package is For FrontEnd and BackEnd You can Use Import To Work With it, You Can use Require asWell:  Caution it Will Break your Code if You use both import and Require at the same Project,  This information is Those newbie Developers. 

@@ -1,3 +1,14 @@
+![GitHub](https://img.shields.io/github/license/jamaaldev/birthday-check?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jamaaldev/birthday-check?style=for-the-badge)
+![npm bundle size](https://img.shields.io/bundlephobia/min/birthday-check?style=for-the-badge)
+![npms.io (quality)](https://img.shields.io/npms-io/quality-score/birthday-check?style=for-the-badge)
+![npms.io (quality)](https://img.shields.io/npms-io/maintenance-score/birthday-check?style=for-the-badge)
+![npms.io (quality)](https://img.shields.io/npms-io/popularity-score/birthday-check?style=for-the-badge)
+![npms.io (quality)](https://img.shields.io/npms-io/final-score/birthday-check?style=for-the-badge)
+![node-current](https://img.shields.io/node/v/birthday-check?style=for-the-badge)
+![npm](https://img.shields.io/npm/dm/birthday-check?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/birthday-check?style=for-the-badge)
+![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/birthday-check?style=for-the-badge)
 # birthday-check
 made by :somalia: 
 ![](https://github.com/jamaaldev/DesktopFiles/blob/1e9d00e9bb9536a9903ced9d263ab46aa2c4e199/HD%20Banner%20(2).jpeg?raw=true?raw=trues=400)

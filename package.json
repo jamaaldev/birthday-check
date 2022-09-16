@@ -6,9 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/jamaaldev/birthday-check.git"
   },
-  "engines": {
-    "node": ">=12"
-  },
+ 
   "author": "jamaaldev",
   "license": "MIT",
   "bugs": {

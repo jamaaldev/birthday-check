@@ -1,7 +1,7 @@
 {
   "name": "birthday-check",
   "version": "2.1.6",
-  "description": "This Packages is for Calculate the user's Date of Birth and user's Birthday also When The User Joint.etc",
+  "description": "This Package is for Calculating the user's Date of Birth and user's Birthday and also When The User JointDate.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamaaldev/birthday-check.git"

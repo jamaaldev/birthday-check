@@ -11,6 +11,10 @@
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/birthday-check?style=for-the-badge)
 # birthday-check
  
+
+
+## This Package is for Calculating the user's Date of Birth and user's Birthday and also When The User JointDate.
+
 ![](https://github.com/jamaaldev/DesktopFiles/blob/28665401a4250a68fb46d5250b10818eacdda568/HD%20Banner.png?raw=true?raw=trues=400)
 
 Feature:DaysToCome :white_check_mark:<br>

@@ -1,69 +1,46 @@
 {
+  "name": "birthday-check",
   "version": "2.1.6",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=12"
-  },
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint --fix",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
+  "description": "This Packages is for Calculate the user's Date of Birth and user's Birthday also When The User Joint.etc",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamaaldev/birthday-check.git"
   },
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "jamaaldev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamaaldev/birthday-check/issues"
+  },
+  "homepage": "https://github.com/jamaaldev/birthday-check#readme",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "birthday-check",
     "birthday",
     "age",
     "day left",
-    "day gone"
+    "day gone",
+    "yearold"
   ],
-  "name": "birthday-check",
-  "author": "jamaaldev",
-  "bugs": {
-    "url": "https://github.com/jamaaldev/birthday-check/issues"
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./dist/birthday-check.cjs",
+    "default": "./dist/birthday-check.modern.js"
   },
-  "homepage": "https://github.com/jamaaldev/birthday-check#readme",
-  "module": "dist/birthday-check.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/birthday-check.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/birthday-check.esm.js",
-      "limit": "10 KB"
-    }
-  ],
+  "main": "./dist/birthday-check.cjs",
+  "module": "./dist/birthday-check.esm.js",
+  "unpkg": "./dist/birthday-check.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^7.0.3",
-    "husky": "^7.0.4",
-    "size-limit": "^7.0.3",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.2"
+    "microbundle": "^0.15.1"
   }
 }
